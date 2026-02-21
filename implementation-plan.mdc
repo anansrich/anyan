@@ -1,0 +1,49 @@
+---
+description: 心理咨询师个人网页前端开发实施计划
+globs: ["**/*.{ts,tsx,js,jsx,css}"]
+---
+
+# 实施计划 - 心理咨询师个人网页
+
+## 1. 基础环境与全局样式配置
+- [x] 初始化 Tailwind CSS 主题（颜色、字体、动画曲线） **Done**
+- [x] 引入 `League Spartan` 字体并配置全局样式 (Reset, Global Classes) **Done**
+  * 创建了 `tailwind.config.ts` 和 `globals.css`
+  * 配置了色彩系统、字体族、贝塞尔曲线动画
+
+## 2. 导航栏组件 (Navigation)
+- [x] 实现 80px 高度、磨砂玻璃 (Glassmorphism) 效果 **Done**
+- [x] 设计大写加粗的品牌标识与宽字间距的菜单项 **Done**
+- [x] 制作胶囊形 CTA 预约按钮 (#e4a4bd 背景) **Done**
+  * 实现了 `src/components/Navigation.tsx`
+  * 配置了磨砂玻璃模糊度和 5% 透明度边框
+
+## 3. 首屏核心视觉 (Hero Section)
+- [x] 实现 15vw 超大字号标题（12列网格布局） **Done**
+- [x] 设计错落排版的引导语与带下划线的 CTA **Done**
+- [x] 右侧加入大圆角卡片，包含灰度/彩色悬停切换的头像/环境图 **Done**
+  * 实现了 `src/components/Hero.tsx`
+  * 加入了贝塞尔曲线过渡动画与悬停滤镜效果
+
+## 4. 个人信息与服务介绍 (About & Services)
+- [x] 实现 3 列服务网格 **Done**
+- [x] 使用错落式网格展示咨询师资历与介绍 **Done**
+  * 实现了 `src/components/AboutServices.tsx`
+  * 配置了悬停背景切换和图标动态平移动画
+
+## 5. 预约系统 UI (Booking System)
+- [x] 设计极简的日历/时间选择器 UI **Done**
+- [x] 使用高对比度按钮提升转化感 **Done**
+  * 实现了 `src/components/Booking.tsx`
+  * 配置了自定义日历样式与时间片选择逻辑
+
+## 6. 个人长文推荐 (Blog/Articles Section)
+- [x] 实现精选文章列表，保持社论感排版 (Editorial style) **Done**
+  * 实现了 `src/components/Articles.tsx`
+  * 配置了灰度切换动画、不对称网格与精美排版
+
+## 7. 响应式与交互优化
+- [x] 确保在移动端的视觉冲击力 **Done**
+- [x] 注入全局 `cubic-bezier(0.16, 1, 0.3, 1)` 动画 **Done**
+  * 完成了 `src/app/page.tsx` 的全局整合
+  * 添加了极简页脚 (Footer) 并配置了响应式布局
